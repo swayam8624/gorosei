@@ -4,6 +4,7 @@ import time
 import os
 import handtrackingmodule as htm
 
+fingers=[]
 brushthickness=10
 eraserthickness=60
 folderpath='Untitled design'
@@ -96,7 +97,7 @@ while True:
         # frame = cv2.addWeighted(frame, 0.5, imgcanvas, 0.5, 0)
         cv2.imshow('frame',frame)
         # cv2.imshow('inv', imginv)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitKey(1) and fingers==[1,1,0,0,1]:
             break
     else:
         break
